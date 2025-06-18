@@ -154,13 +154,13 @@ const footerLinksData = {
         { name: "Content Marketing", href: "#" }
     ],
     company: [
-        { name: "About Us", href: "#" },
+        { name: "About Us", href: "#about" },
         { name: "Our Team", href: "#" },
         { name: "Careers", href: "#" },
-        { name: "Contact", href: "#" }
+        { name: "Contact", href: "#contact" }
     ],
     social: [
-        { name: "LinkedIn", href: "#", icon: "fab fa-linkedin" },
+        { name: "LinkedIn", href: "https://www.linkedin.com/company/strategiq-tech", icon: "fab fa-linkedin" },
         { name: "Twitter", href: "#", icon: "fab fa-twitter" },
         { name: "Facebook", href: "#", icon: "fab fa-facebook" },
         { name: "Instagram", href: "#", icon: "fab fa-instagram" }
@@ -198,7 +198,7 @@ const floatingCardsData = [
     {
         icon: "fas fa-bullseye",
         text: "Targeted Ads",
-        position: { bottom: "20%", left: "30%" },
+        position: { bottom: "20%", left: "10%" },
         delay: "2s"
     }
 ];
@@ -206,6 +206,3 @@ const floatingCardsData = [
 
 // Logo Path
 const logoPath = "../assets/images/logo.png";
-
-// Favicon Path
-const favPath = "../assets/images/favicon.ico";

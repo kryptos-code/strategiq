@@ -300,20 +300,20 @@ body {
 }
 
 .card-1 {
-    top: 20%;
+    top: 10%;
     left: 10%;
     animation-delay: 0s;
 }
 
 .card-2 {
-    top: 50%;
+    top: 30%;
     right: 20%;
     animation-delay: 1s;
 }
 
 .card-3 {
     bottom: 20%;
-    left: 30%;
+    left: 20%;
     animation-delay: 2s;
 }
 

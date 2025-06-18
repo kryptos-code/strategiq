@@ -433,3 +433,23 @@ window.StrategIQApp = {
     loadServices,
     initializeApp
 };
+
+// Sending Email
+document.getElementById("getStartBtn").addEventListener("click", function() {
+    sendEmail();
+});
+
+document.getElementById("learnMoreBtn").addEventListener("click", function() {
+    sendEmail();
+});
+
+document.getElementById("sendEmailBtn").addEventListener("click", function() {
+    sendEmail();
+});
+
+function sendEmail() {
+    const email = "shoaib.rehman@strategiq-tech.com";
+    const subject = "CONTACT US | {topic}";
+    const body = "Hey Shoaib,\n\n{your text}\n\nRegards,\n{your name}";
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
