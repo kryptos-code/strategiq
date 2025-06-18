@@ -12,6 +12,15 @@ function initializeApp() {
     initializeScrollEffects();
     initializeAnimations();
     initializeInteractions();
+    initializeLogo();
+}
+
+// Load logo dynamically
+function initializeLogo(){
+    const navLogo = document.getElementById('nav-icon');
+
+    navLogo.src = `${logoPath}`;
+
 }
 
 // Load services dynamically

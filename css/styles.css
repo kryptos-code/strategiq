@@ -72,11 +72,24 @@ body {
     height: 80px;
 }
 
+.nav-fav {
+    display: flex;
+    gap:1.5rem;
+}
+
+.nav-container img {
+        width: 75px;
+        height: 75px;
+        display: inline-block;
+}
+
 .nav-logo h2 {
     font-family: var(--font-primary);
     font-weight: 800;
     font-size: 1.8rem;
-    background: var(--gradient-primary);
+    line-height: 1;
+    padding-top: 12px;
+    background: var(--primary-purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -86,8 +99,9 @@ body {
 .nav-logo span {
     font-family: var(--font-primary);
     font-weight: 300;
+    line-height: 1;
     color: var(--secondary-dark-purple);
-    font-size: 0.9rem;
+    font-size: 1.4rem;
 }
 
 .nav-menu {
@@ -701,6 +715,10 @@ body {
 
     .nav-toggle {
         display: flex;
+    }
+
+    .hero-container {
+        padding: 100px 0px 0px 20px;
     }
 
     .hero-title {

@@ -202,3 +202,7 @@ const floatingCardsData = [
         delay: "2s"
     }
 ];
+
+
+// Logo Path
+const logoPath = "../assets/images/logo.png";
