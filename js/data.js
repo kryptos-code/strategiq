@@ -206,3 +206,6 @@ const floatingCardsData = [
 
 // Logo Path
 const logoPath = "../assets/images/logo.png";
+
+// Favicon Path
+const favPath = "../assets/images/favicon.ico";
