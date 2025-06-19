@@ -448,7 +448,7 @@ document.getElementById("sendEmailBtn").addEventListener("click", function() {
 });
 
 function sendEmail() {
-    const email = "shoaib.rehman@strategiq-tech.com";
+    const email = "info@strategiq-tech.com";
     const subject = "CONTACT US | {topic}";
     const body = "Hey Shoaib,\n\n{your text}\n\nRegards,\n{your name}";
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
