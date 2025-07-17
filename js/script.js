@@ -443,13 +443,84 @@ document.getElementById("learnMoreBtn").addEventListener("click", function() {
     sendEmail();
 });
 
-document.getElementById("sendEmailBtn").addEventListener("click", function() {
-    sendEmail();
-});
-
 function sendEmail() {
     const email = "info@strategiq-tech.com";
     const subject = "CONTACT US | {topic}";
     const body = "Hey Shoaib,\n\n{your text}\n\nRegards,\n{your name}";
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
+
+(function () {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  })();
+
+// Form submission handling
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        alert("Please complete the reCAPTCHA.");
+        return;
+    }
+
+    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+        .then(() => {
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+            grecaptcha.reset();
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert("Failed to send message.");
+        });
+});
+
+// Inject the sitekey into the reCAPTCHA div
+document.addEventListener("DOMContentLoaded", function () {
+    const recaptchaDiv = document.getElementById("recaptcha-container");
+  
+    if (recaptchaDiv && typeof RECAPTCHA_SITE_KEY !== "undefined") {
+      recaptchaDiv.setAttribute("data-sitekey", RECAPTCHA_SITE_KEY);
+    } else {
+      console.error("reCAPTCHA sitekey not found in config.js.");
+    }
+  });
+
+  (function () {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  })();
+
+// Form submission handling
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        alert("Please complete the reCAPTCHA.");
+        return;
+    }
+
+    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+        .then(() => {
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+            grecaptcha.reset();
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert("Failed to send message.");
+        });
+});
+
+// Inject the sitekey into the reCAPTCHA div
+document.addEventListener("DOMContentLoaded", function () {
+    const recaptchaDiv = document.getElementById("recaptcha-container");
+  
+    if (recaptchaDiv && typeof RECAPTCHA_SITE_KEY !== "undefined") {
+      recaptchaDiv.setAttribute("data-sitekey", RECAPTCHA_SITE_KEY);
+    } else {
+      console.error("reCAPTCHA sitekey not found in config.js.");
+    }
+  });
